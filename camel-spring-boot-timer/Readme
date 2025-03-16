@@ -1,1 +1,10 @@
-Hello
+This project is help to demonstrate spring boot integration with Apache Camel using Java DSL.
+This project uses spring boot profiles to demonstrate how we can configure different property file for different environment
+we have used 3 application properties 
+1.application.properties (main file)
+2.application-dev.properties (for dev environment)
+3.application-dev.properties (for uat environment)
+we can run this application using below command
+> mvn spring-boot:run -Dspring-boot.run.profiles=dev
+>mvn spring-boot:run -Dspring-boot.run.profiles=uat
+    
