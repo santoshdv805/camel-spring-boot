@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.4.2</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>camel-spring-boot-timer</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>camel-spring-boot-timer</name>
+	<description>Demo project for Spring Boot</description>
+	<url />
+	<licenses>
+		<license />
+	</licenses>
+	<developers>
+		<developer />
+	</developers>
+	<scm>
+		<connection />
+		<developerConnection />
+		<tag />
+		<url />
+	</scm>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencyManagement>
+        <dependencies>
+            <!-- Camel BOM -->
+            <dependency>
+                <groupId>org.apache.camel.springboot</groupId>
+                <artifactId>camel-spring-boot-bom</artifactId>
+                <version>4.10.0-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring Boot BOM -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>3.4.2</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+	<dependencies>
+		  <!-- Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+		 <!-- Camel -->
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-stream-starter</artifactId>
+        </dependency>
+        <!-- include camel developer console -->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.camel.springboot</groupId>-->
+<!--            <artifactId>camel-console-starter</artifactId>-->
+<!--        </dependency>-->
+        
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <!-- include JMX that allows additional information in camel developer console -->
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-management-starter</artifactId>
+        </dependency>
+        <!-- Camel CLI -->
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-cli-connector-starter</artifactId>
+        </dependency>
+
+        <!-- test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-test-spring-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
